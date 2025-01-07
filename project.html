@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AIR5101 / CI6021 | Project</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-46895817-2', 'auto');
+  ga('send', 'pageview');
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="style-new.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand brand" href="index.html">AIR5101 / CIE6021 Home</a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="assignments.html">Assignments</a></li>
+          <li><a href="project.html">Project</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div id="header" style="text-align:center">
+    <h1>AIR5101 / CIE6021: Generative AI</h1>
+    <h3>CUHK-SZ - Spring 2025</h3>
+    <div style="clear:both;"></div>
+  </div>
+
+
+<div class="sechighlight">
+<div class="container sec">
+  <h2>Final Project</h2>
+  <ul>
+    <li><a href="project.html#dates">Important Dates</a></li>
+    <li><a href="project.html#overview">Overview</a></li>
+    <li><a href="project.html#collaboration">Collaboration Policy</a></li>
+    <li><a href="project.html#late-policy">Late Policy</a></li>
+    <li><a href="project.html#proposal">Proposal</a></li>
+    <li><a href="project.html#milestone">Milestone</a></li>
+    <li><a href="project.html#report">Final Report</a></li>
+    <li><a href="project.html#presentation">Final Presentation</a></li>
+    <li><a href="project.html#proj_ideas">Sample Project Ideas</a></li>
+  </ul>
+</div>
+</div>
+
+<div class="container sec" id="dates" style="margin-top:-50px">
+  <br>
+  <h2>Important Dates</h2>
+  Unless otherwise noted, all project items are due by 11:59pm Beijing Time.<br><br>
+
+<table class="table">
+  <tr class="active">
+    <th>Deliverable</th><th>Weight</th><th>Due Date</th>
+  </tr>
+
+<!-- TODO -->
+<tbody>
+  <tr>
+    <td>Project Proposal</td>
+    <td>5%</td>
+    <td>Feb 20, 2025</td>
+  </tr>
+  <tr>
+    <td>Project Report</td>
+    <td>25%</td>
+    <td>May 10, 2025</td>
+  </tr>
+  <tr>
+    <td>Project Presentation</td>
+    <td>10%</td>
+    <td>The week of May 6</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+<div class="container sec" id="overview" style="margin-top:-50px">
+  <br>
+  <h2>Overview</h2>
+  <p>
+    The course project is an opportunity for you to apply what you have learned in class and to explore the frontiers in GenAI.
+    Potential projects may fall into these categories:
+  </p>
+  <ul>
+    <li>
+      <strong>Methods.</strong>
+      Propose some novel methods, models or algorithms that improve the existing ones under some setting.
+      Think of diffusion transformers vs. U-Net-based diffusion models, for instance.
+    <li>
+      <strong>Applications.</strong>
+      If you're coming to the class with a specific background and interests (e.g. biology,
+      engineering, physics), we'd love to see you apply GenAI models to problems related to your
+      particular domain of interest.
+    </li>
+    <li>
+      <strong>Abalation studies / engineering recipes.</strong>
+      Many methods that work in practice include many hyperparameters and design choices.
+      How do different choices of them make a difference, and why?
+      How should other practioners pick the them to save time?
+      You may do some ablation studies to demonstrate your empirical observations.
+    </li>
+    <li>
+      <strong>Theory (not very recommended).</strong>
+      You may show some interesting theoretical aspects (generalization bounds, theoretical gaps of some approximations, etc.).
+      We do expect theoretical work be done individually. Double check with us if you decide to work on theory.
+    </li>
+    <li>
+      <strong>Survey (not recommended).</strong>
+      In rare cases, we allow students to write surveys in some domain. Students who write surveys should work individually, 
+      and demonstrate that either 1) no one has written similar surveys for this domain or 2) the intended survey is much different from existing ones.
+      Due to the large volume of the class, we cannot afford everyone writing surveys, so only treat this option as your last resort.
+      Consult us before you pursue this path.
+    </li>
+  </ul>
+
+  <p>
+  We have compiled a list of <a href="#proj_ideas">project ideas for inspiration</a>. Note that you <b>do not</b> need to pick one from here. Rather, these can be served as starting points for you to find the ideas that excite you.
+  </p>
+  <p>
+    To inspire ideas, you might also look at recent deep learning publications from top-tier
+    conferences or course projects from renowned universities.
+  </p>
+
+</div>
+
+<div class="container sec" id="collaboration" style="margin-top:-50px">
+  <br>
+  <h2>Collaboration</h2>
+  <p>
+    You can work in teams of up to <strong>4</strong> people (but only 1 if you end up working on theory or write a survey).
+    We do expect that projects done with
+    4 people have more impressive writeup and results than projects done with fewer people. For example, to get a
+    sense for the scope and expectations for projects, have a look at project reports from
+    previous years. While we encourage that you work in teams, you may also work alone.
+  </p>
+
+  <h2>Honor Code</h2>
+  <p>
+    You may consult any papers, books, online references, or publicly available implementations for
+    ideas and code that you may want to incorporate into your strategy or algorithm, so long as you
+    clearly cite your sources in your code and your writeup. However, under no circumstances may you
+    look at another group's code or incorporate their code into your project.
+  </p>
+  <p>
+    If you are combining your course project with another ongoing course project or research project, you DO NOT need to receive prior permission.
+  </p>
+</div>
+
+<div class="container sec" id="proposal" style="margin-top:-50px">
+  <br>
+  <h2>Project Proposal</h2>
+  <p>
+    The project proposal should be one paragraph (200-400 words). Your project proposal should
+    describe:
+  </p>
+  <ul>
+    <li>What is the problem that you will be investigating? Why is it interesting?</li>
+    <li>What reading will you examine to provide context and background?</li>
+    <li>If you do experiments: what data will you use?</li>
+    <li>
+      What method or algorithm are you proposing? If there are existing implementations, will you
+      use them and how? How do you plan to improve or modify such implementations? You don't have
+      to have an exact answer at this point, but you should have a general sense of how you will
+      approach the problem you are working on.
+    </li>
+    <li>
+      How will you evaluate your results? Qualitatively, what kind of results do you expect (e.g.
+      plots or figures)? Quantitatively, what kind of analysis will you use to evaluate and/or
+      compare your results (e.g. what performance metrics or statistical tests)?
+    </li>
+    <li>
+     If you are combining this project with another course/research project, what is the unique portion of the project that is counted towards this class?
+    </li>
+  </ul>
+  <p>
+    <b>Submission:</b>
+    Please submit your proposal as a PDF. <b>Only one person on your team should submit.</b>
+    Please have this person add the rest of your team as collaborators as a "Group Submission".
+  </p>
+</div>
+
+<div class="container sec" id="milestone" style="margin-top:-50px">
+  <br>
+  <h2>Project Milestone</h2>
+  It is NOT required to submit a project milestone report. However, we do encourage teams to submit one by March 20 as an internal deadline.
+  I will be relatively lenient in grading the final report if the team submit their milestone report.
+  <br>
+  Your project milestone report should be between 2 - 3 pages using the
+  <a href="https://neurips.cc/Conferences/2023/PaperInformation/StyleFiles">NeurIPS template</a>
+  or the <a href="https://github.com/ICLR/Master-Template/raw/master/iclr2024.zip">ICLR template</a>.
+  <br>
+  The following is a suggested structure for your report:
+  <p>
+    <ul>
+      <li>Title, Author(s)</li>
+      <li>Introduction: this section introduces your problem, and the overall plan for approaching your problem</li>
+      <li>Problem statement: Describe your problem precisely specifying the dataset to be used, expected results and evaluation</li>
+      <li>Technical Approach: Describe the methods you intend to apply to solve the given problem</li>
+      <li>
+      Intermediate/Preliminary Results: State and evaluate your results upto the milestone
+      </li>
+    </ul>
+  </p>
+  <p>
+    <strong>Submission</strong>
+    Please submit your milestone as a PDF. <b>Only one person on your team should submit.</b>
+    Please have this person add the rest of your team as collaborators as a "Group Submission".
+  </p>
+</div>
+
+<div class="container sec" id="report" style="margin-top:-50px">
+  <br>
+  <h2>Final Report</h2>
+  <p>
+    Your final write-up is required to be between <b>4 - 8</b> pages using the
+    <a href="https://neurips.cc/Conferences/2023/PaperInformation/StyleFiles">NeurIPS template</a>
+    or the <a href="https://github.com/ICLR/Master-Template/raw/master/iclr2024.zip">ICLR template</a>,
+    structured like a paper from a machine learning / computer vision / natural language processing conference.
+    Please use this template so we can fairly judge all student projects without worrying about
+    altered font sizes, margins, etc.
+  </p>
+  <p>
+    The following is a suggested structure for your report, as well as the rubric that we will
+    follow when evaluating reports. You don't necessarily have to organize your report using
+    these sections in this order, but that would likely be a good starting point for most projects.
+  </p>
+  <ul>
+    <li><b>Title, Author(s)</b></li>
+    <li>
+      <b>Abstract.</b> Briefly describe your problem, approach, and key results. Should be no more
+      than 300 words.
+    </li>
+    <li>
+      <b>Introduction.</b>
+      Describe the problem you are working on, why it's important, and an overview of your results
+    </li>
+    <li>
+      <b>Related Work.</b>
+      Discuss published work that relates to your project. How is your approach similar or different
+      from others?
+    </li>
+    <li>
+      <b>Methods.</b>
+      Discuss your approach for solving the problems that you set up in the introduction. Why is
+      your approach the right thing to do? Did you consider alternative approaches? You should
+      demonstrate that you have applied ideas and skills built up during the quarter to tackling
+      your problem of choice. It may be helpful to include figures, diagrams, or tables to
+      describe your method or compare it with other methods.
+    </li>
+    <li>
+      <b>Experiments (not necessary for theoretical papers).</b>
+      Discuss the experiments that you performed to demonstrate that your approach solves the
+      problem. The exact experiments will vary depending on the project, but you might compare
+      with previously published methods, perform an ablation study to determine the impact of
+      various components of your system, experiment with different hyperparameters or architectural
+      choices, use visualization techniques to gain insight into how your model works, discuss
+      common failure modes of your model, etc. You should include graphs, tables, or other figures
+      to illustrate your experimental results.
+    </li>
+    <li>
+      <b>Conclusion.</b>
+      Summarize your key results - what have you learned? Suggest ideas for future extensions
+      or new applications of your ideas.
+    </li>
+    <li>
+      <b>Appendix and/or Supplementary Materials (optional).</b>
+      If you would like to share more related but less relevant stuff.
+    </li>
+  </ul>
+  <p>
+    <b>Submission.</b>
+    You will submit your final report as a PDF and your supplementary material as a separate PDF
+    or ZIP file.
+  </p>
+  <p>
+    <b>Additional Submission Requirements.</b>
+    We will also ask you do do the following when you submit your project report:
+  </p>
+  <ul>
+    <li>
+      <b>Your report PDF should list <i>all</i> authors who have contributed to your work; enough to
+        warrant a co-authorship position.</b> This includes people not enrolled in this course such as
+      faculty/advisors if they sponsored your work with funding or data, significant mentors (e.g.,
+      PhD students or postdocs who coded with you, collected data with you, or helped draft your
+      model on a whiteboard). All authors should be listed directly underneath the title on your PDF.
+      Include a footnote on the first page indicating which authors are not enrolled in this course. All
+      co-authors should have their institutional/organizational affiliation specified below the title.
+    </li>
+    <li>
+      <b>Any code that was used as a base for projects must be referenced and cited in the body of the paper.</b>
+      This includes assignment codes, finetuning example codes, open-source, or Github
+      implementations. You can use a footnote or full reference/bibliography entry.
+    </li>
+  </ul>
+</div>
+
+<div class="container sec" id="presentation" style="margin-top:-50px">
+    <br>
+    <h2>Presentation Session (TBD)</h2>
+  We will either have one-by-one team presentations, poster sessions, or recordings of presentations. Details TBD.
+</div>
+
+
+<div class="sechighlight">
+  <div class="container sec" id="proj_ideas">
+    <h2>Sample Project Ideas</h2>
+  
+    <p>NOTE: ideas here are only for inspiration.</p>
+
+    <h3>Methods</h3>
+    <ul>
+      <li>Explore the capabilities of LLMs to self-correct in learning formula from observational data (e.g., F=ma).</li>
+      <li>Better tricks that help consistent generation of long videos.</li>
+      <li>Efficient methods for measuring uncertainty or doing calibration on foundation models.</li>
+      <li>Discover active learning methods for efficient alignment of large models.</li>
+    </ul>
+  
+    <h3>Applications</h3>
+    <ul>
+      <li>Use LLMs to generate plausible layouts of rooms and synthesize images.</li>
+      <li>Extract causal relationship from videos or images with VLMs.</li>
+      <li>Use LLMs to control software to do something interesting.</li>
+      <li>Extract material properties from video models.</li>
+      <li>Use diffusion-based depth/normal estimation for extracting 3D information like poses.</li>
+      <li>Finetune a StableDiffusion model that does something fancy.</li>
+      <li>Use LLMs to find better reward functions for some tasks (<a href="https://eureka-research.github.io/">example</a>).</li>
+    </ul>
+  
+    <h3>Ablation / Empirical Studies</h3>
+    <ul>
+      <li>Empirically identify the effects of hyperparameters for some specific model. </li>
+      <li>Measure the effect of different but semantically-similar prompts in VLMs or LLMs.</li>
+      <li>Examine and visualize the semantics of attention maps in foundation models.</li>
+      <li>Effect of different regularizations in model finetuning.</li>
+      <li>Benchmarking capabilities of foundation models on some task.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- jQuery and Boostrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

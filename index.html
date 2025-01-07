@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AIR5101 / CIE6021</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+  <!-- Google Analytics -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-46895817-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="style-new.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <script src="convnet_demo/convnet-min.js"></script>
+  <script src="convnet_demo/convnet_demo.js"></script>
+
+  <script>
+    function page_loaded() {
+      $('#convask').click(function () {
+        $("#explain").slideToggle('fast');
+      })
+      start_convnet_demo();
+    }
+  </script>
+</head>
+
+<body onload="page_loaded()">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand brand" href="index.html">AIR5101 / CIE6021 Home</a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="assignments.html">Assignments</a></li>
+          <li><a href="project.html">Project</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div id="header" style="text-align:center">
+    <h1>AIR5101 / CIE6021: Generative AI</h1>
+    <h3>CUHK-SZ - Spring 2025</h3>
+    <div style="clear:both;"></div>
+  </div>
+
+
+  <div class="sechighlight">
+    <div class="container sec">
+      <h2>Course Description</h2>
+
+      <div id="coursedesc">
+        This course explores generative artificial intelligence (GenAI) -
+        the start-of-the-art models that are trained in generative approaches, exhibit extraordinary capabilities
+        in creation and reasoning, and demonstrate huge potential towards artificial general intelligence (AGI).
+        This graduate-level course is designed to be a mix of lecture-style and seminars-style classes
+        and encourages students to explore the frontiers of this fast evolving field.
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <div class="container sec" id="people">
+    <div class="col-md-2">
+      <h3>Instructors</h3>
+      <div class="instructor">
+        <a href="https://itszhen.com" target="_blank">
+          <div class="instructorphoto">
+            <img class="img-hover" src="img/zhen.jpg">
+          </div>
+          <div>Zhen Liu</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <h3>Teaching Assistants</h3>
+      <div class="instructor" style="vertical-align: top;">
+        <a href="" target="_blank">
+          <div class="instructorphoto"><img src="img/yinghong.jpg"></div>
+          <div>Yinghong Liao<br>(Head TA)</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="" target="_blank">
+          <div class="instructorphoto"><img src="img/haoyang.jpg"></div>
+          <div>Haoyang Li</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sechighlight">
+    <div class="container sec" id="logistics">
+      <h2>Course Logistics</h2>
+      <br>
+      <ul>
+        <li><b>Location:</b> Tuesday/Thursday 12:00-1:30PM Beijing Time, at Teaching D 103.</li>
+        <li><b>Office Hours:
+          <ul>
+            <li>Zhen: TR 3-4pm</li>
+            <li>Yinghong: Friday 10-11pm</li>
+            <li>Haoyang: Wednesday 10-11pm</li>
+          </ul>
+        </b></li>
+        <li><b>Course-related emails: </b> ALWAYS start with <b>[AIR5101/CIE6021]</b>. Otherwise emails will be automatically ignored.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container sec" id="coursework" style="margin-top:-20px">
+    <br>
+    <h2>Prerequisites</h2>
+
+    <ul>
+      <li><span class="spanh">Proficiency in Python</span><br>
+        All class assignments will be in Python and PyTorch.
+        If you are not familiar with Python but have a lot of programming experience but in a different
+        language (e.g. C/C++/Matlab/Javascript) you will probably be fine.</li>
+      <li><span class="spanh">Calculus, Linear Algebra</span><br> You should be
+        comfortable taking derivatives, understanding matrix operations (rank, eigen-decomposition, etc.) and notations.</li>
+      <li><span class="spanh">Basic Probability and Statistics</span><br>
+        You should know basics of probabilities, gaussian distributions, mean, standard deviation, maximum likelihood estimation, etc.</li>
+        <li><span class="spanh">Basics in machine learning</span><br>
+          You should know these concepts: overfitting/underfitting, validation sets, KL divergence, basic unsupervised learning methods (e.g., K-means), CNNs, etc.</li>
+    </ul>
+  </div>
+
+   <div class="sechighlight">
+    <div class="container sec" id="coursework" style="margin-top:-20px">
+      <br>
+      <h2>Grading Policy</h2>
+    <h3>Coding Assignments (30%)</h3>
+    <p>See the <a href="assignments.html">Assignments</a> page for details regarding assignments, late days and
+      collaboration policies.</p>
+
+    <h3>Paper Presentations & Reviews (30%)</h3>
+    <p>
+      Each student is expected to review one paper each week, starting from Feburary (a paper list will be provided each week).
+
+      In addition, students are expected to present a paper during the whole semester (in groups of 2).
+    </p>
+
+    <h3>Final Project (40%)</h3>
+    <p>See the <a href="project.html">Project</a> page for more details regarding the final course project.</p>
+
+  </div>
+  </div>
+
+  <div class="container sec">
+    <h3>FAQ</h3>
+    <div class="qqa">
+      <div class="qq">Academic accommodations:</div>
+      <div class="qa">If you need an academic accommodation based on a disability, you should send the request
+        to the University.</div>
+    </div>
+    <div class="qqa">
+      <div class="qq">Can I audit or sit in?</div>
+      <div class="qa">In general we are very open to auditing if you are a member of the CUHK-SZ community
+        (registered student, staff, and/or faculty). Out of courtesy, we would appreciate that you first email us or
+        talk to the instructor after the first class you attend.</div>
+    </div>
+    <div class="qqa">
+      <div class="qq">Can I work in groups for the Final Project?</div>
+      <div class="qa">Yes, in groups of up to <b>four</b> people.</div>
+    </div>
+    <div class="qqa">
+      <div class="qq">Can I combine the Final Project with another course?</div>
+      <div class="qa"> Yes, you may. However, before doing so you must receive permission from the instructors of the other
+        course and inform me accordingly.</div>
+    </div>
+  </div>
+
+
+  <div class="sechighlight">
+    <div class="container sec" id="coursework" style="margin-top:-20px">
+      <br>
+      <h2>Acknowledgement</h2>
+
+      <p>The course page is adapted from <a href="https://cs231n.stanford.edu/">CS231n</a> at Stanford
+        and <a href="https://courses.cs.washington.edu/courses/cse478/23wi/">CSE578</a> at UW.
+        The project instructions are heavily borrowed from CS231n.</p>
+
+    </div>
+</div>
+
+  <!-- jQuery and Boostrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
